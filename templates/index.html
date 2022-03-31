@@ -1,11 +1,129 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Add Plane</h1>
 <div class="row">
-    <a href="/logout">logout</a>
-    <div class="col d-flex justify-content-center p-5">
-        <form action="" method="post" class="bg-light p-4">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-success" role="alert">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+    <div>
+        <form action="/save-plane" method="post">
+            <div class="p-1">
+                <label for="manufacturer">Manufacturer</label>
+                <input type="text" class="form-control" name="manufacturer" id="manufacturer">
+            </div>
+            <div class="p-1">
+                <label for="model">Model</label>
+                <input type="text" class="form-control" name="model" id="model">
+            </div>
+            <div class="p-1">
+                <label for="length">Length</label>
+                <input type="text" class="form-control" name="length" id="length">
+            </div>
+            <div class="p-1">
+                <label for="wingspan">Wingspan</label>
+                <input type="text" class="form-control" name="wingspan" id="wingspan">
+            </div>
+            <div class="p-1">
+                <label for="height">Height</label>
+                <input type="text" class="form-control" name="height" id="height">
+            </div>
+            <div class="p-1">
+                <label for="wing_area">Wing area</label>
+                <input type="text" class="form-control" name="wing_area" id="wing_area">
+            </div>
+            <div class="p-1">
+                <label for="maximum_take_off_weight">Maximum take off weight</label>
+                <input type="text" class="form-control" name="maximum_take_off_weight" id="maximum_take_off_weight">
+            </div>
+            <div class="p-1">
+                <label for="maximum_landing_weight">Maximum landing weight</label>
+                <input type="text" class="form-control" name="maximum_landing_weight" id="maximum_landing_weight">
+            </div>
+            <div class="p-1">
+                <label for="maximum_zero_fuel_weight">Maximum zero fuel weight</label>
+                <input type="text" class="form-control" name="maximum_zero_fuel_weight" id="maximum_zero_fuel_weight">
+            </div>
+            <div class="p-1">
+                <label for="maximum_payload">Maximum payload</label>
+                <input type="text" class="form-control" name="maximum_payload" id="maximum_payload">
+            </div>
+            <div class="p-1">
+                <label for="standard_fuel_capacity">Standard fuel capacity</label>
+                <input type="text" class="form-control" name="standard_fuel_capacity" id="standard_fuel_capacity">
+            </div>
+            <div class="p-1">
+                <label for="max_stock_of_fuel">Max stock of fuel</label>
+                <input type="text" class="form-control" name="max_stock_of_fuel" id="max_stock_of_fuel">
+            </div>
+            <div class="p-1">
+                <label for="maximum_range">Maximum range</label>
+                <input type="text" class="form-control" name="maximum_range" id="maximum_range">
+            </div>
+            <div class="p-1">
+                <label for="cruise_speed">Cruise speed</label>
+                <input type="text" class="form-control" name="cruise_speed" id="cruise_speed">
+            </div>
+            <div class="p-1">
+                <label for="maximum_speed">Maximum speed</label>
+                <input type="text" class="form-control" name="maximum_speed" id="maximum_speed">
+            </div>
+            <div class="p-1">
+                <label for="maximum_operating_altitude">Maximum operating altitude</label>
+                <input type="text" class="form-control" name="maximum_operating_altitude" id="maximum_operating_altitude">
+            </div>
+            <div class="p-1">
+                <label for="take_off_field_length">Take off field length</label>
+                <input type="text" class="form-control" name="take_off_field_length" id="take_off_field_length">
+            </div>
+            <div class="p-1">
+                <label for="landing_field_length">Landing field length</label>
+                <input type="text" class="form-control" name="landing_field_length" id="landing_field_length">
+            </div>
+            <div class="p-1">
+                <label for="engines">Engines</label>
+                <input type="text" class="form-control" name="engines" id="engines">
+            </div>
+            <div class="p-1">
+                <label for="fuel_efficiency">Fuel efficiency</label>
+                <input type="text" class="form-control" name="fuel_efficiency" id="fuel_efficiency">
+            </div>
+            <div class="p-1">
+                <label for="fuel_flow_rate">Fuel flow rate</label>
+                <input type="text" class="form-control" name="fuel_flow_rate" id="fuel_flow_rate">
+            </div>
+            <div class="p-1">
+                <label for="passengers_1_class">Passengers 1 class</label>
+                <input type="text" class="form-control" name="passengers_1_class" id="passengers_1_class">
+            </div>
+            <div class="p-1">
+                <label for="passengers_2_class">Passengers 2 class</label>
+                <input type="text" class="form-control" name="passengers_2_class" id="passengers_2_class">
+            </div>
+            <div class="p-1">
+                <label for="passengers_3_class">Passengers 3 class</label>
+                <input type="text" class="form-control" name="passengers_3_class" id="passengers_3_class">
+            </div>
+            <div class="p-1">
+                <label for="cabin_width">Cabin width</label>
+                <input type="text" class="form-control" name="cabin_width" id="cabin_width">
+            </div>
+            <div class="p-1">
+                <label for="cabin_height">Cabin height</label>
+                <input type="text" class="form-control" name="cabin_height" id="cabin_height">
+            </div>
+            <div class="p-1">
+                <label for="additional_fields">Additional fields</label>
+                <textarea class="form-control" name="additional_fields" id="additional_fields"></textarea>
+            </div>
+            <div class="p-1">
+                <button type="submit" class="btn btn-success">Save</button>
+            </div>
         </form>
     </div>
 </div>
