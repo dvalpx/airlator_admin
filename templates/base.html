@@ -12,6 +12,7 @@
     <div class="container">
         <div class="row">
             <h2 class="mt-3">{{ page_title }}</h2>
+            {% if 'login' in session %}
             <div class="">
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
@@ -25,6 +26,7 @@
                     </li>
                 </ul>
             </div>
+            {% endif %}
         </div>
         {% block content %}{% endblock %}
     </div>
