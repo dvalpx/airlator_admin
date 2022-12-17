@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Column</th>
+                <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Manufacturer</td>
+                <td>{{ plane['manufacturer'] }}</td>
+            </tr>
+            <tr>
+                <td>Model</td>
+                <td>{{ plane['model'] }}</td>
+            </tr>
+            <tr>
+                <td>Length</td>
+                <td>{{ plane['length'] }}</td>
+            </tr>
+            <tr>
+                <td>Wingspan</td>
+                <td>{{ plane['wingspan'] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
