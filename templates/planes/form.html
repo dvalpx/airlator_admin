@@ -9,6 +9,7 @@
 {% endwith %}
 
 <form action="/planes/save" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
     <div class="p-1">
         <label for="manufacturer" class="mb-2">Manufacturer</label>
         <input type="text" class="form-control" name="manufacturer" id="manufacturer">

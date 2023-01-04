@@ -1,5 +1,5 @@
 <h3 class="float-end">Image</h3>
-<form action="/planes/upload-image" method="post" enctype="multipart/form-data" class="mt-5">
+<form action="/planes/{{ plane['id'] }}/upload-image" method="post" enctype="multipart/form-data" class="mt-5">
     <div class="mb-3">
         <label for="plane_image" class="mb-2">Plane image</label>
         <input type="file" class="form-control" name="plane_image" id="plane_image">
