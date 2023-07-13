@@ -34,6 +34,7 @@ def upload_image():
 @app.route("/login", methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':
+        # Just for local testing purposes - will be replaced
         if request.form['password'] == '123456':
             session['login'] = True
             return redirect(url_for('index'))
